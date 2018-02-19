@@ -3,6 +3,8 @@ package org.allg.service;
 import java.util.List;
 
 import org.allg.domain.BoardVO;
+import org.allg.domain.Criteria;
+import org.allg.domain.SearchCriteria;
 
 public interface BoardService {
 	
@@ -15,4 +17,14 @@ public interface BoardService {
 	public void remove(Integer bno) throws Exception;
 	
 	public List<BoardVO> listAll() throws Exception;
+	
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
+	
+	public int listCountCriteria(Criteria cri) throws Exception;
+	
+	public List<BoardVO> listSearchCriteria(SearchCriteria cri) throws Exception;
+	
+	public int listSearchCount(SearchCriteria cri) throws Exception;
+	
+	public List<String> getAttach(Integer bno) throws Exception;
 }
