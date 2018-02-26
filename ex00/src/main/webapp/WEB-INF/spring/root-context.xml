@@ -38,5 +38,16 @@
 	<!-- org.allg.* 패키지 자동으로 인식하기 위한 설정 -->
 	<context:component-scan base-package="org.allg.persistence"></context:component-scan>
 	<context:component-scan base-package="org.allg.service"></context:component-scan>	
+	
+	<!-- Transaction -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- AOP auto proxy -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<!-- XML 방식으로 AOP 기능을 설정할 때 사용 -->
+	<aop:config></aop:config>
 </beans>
 
