@@ -93,8 +93,8 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 	
 	@Override
-	public void addAttach(String fullName) throws Exception {
-		session.insert(namespace + ".addAttach", fullName);
+	public void addAttach(String fileName) throws Exception {
+		session.insert(namespace + ".addAttach", fileName);
 	}
 	
 	@Override
